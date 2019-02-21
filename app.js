@@ -6,16 +6,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.set("view engine", "ejs");
 
+var campgrounds = [
+    {name: "Salmon Creek", image: "https://www.flickr.com/photos/scpetrel/14301524356/"},
+    {name: "Granite Hill", image: "https://www.flickr.com/photos/scpetrel/14301524356/"},
+    {name: "Mountain Goat's Rest", image: "https://www.flickr.com/photos/scpetrel/14301524356/"}
+];
+
 app.get("/", function(req, res) {
     res.render("landing");
 });
 
 app.get("/campgrounds", function(req, res) {
-    var campgrounds = [
-        {name: "Salmon Creek", image: "https://www.flickr.com/photos/scpetrel/14301524356/"},
-        {name: "Granite Hill", image: "https://www.flickr.com/photos/scpetrel/14301524356/"},
-        {name: "Mountain Goat's Rest", image: "https://www.flickr.com/photos/scpetrel/14301524356/"}
-    ];
     res.render("campgrounds", {campgrounds:campgrounds});
 });
 
@@ -30,7 +31,7 @@ app.post("/campgrounds", function(req, res) {
 });
 
 app.get("/campgrounds/new", function(req, res) {
-    res.render("new");
+    res.render("new.ejs");
 });
 
 app.listen(3000, function(){
