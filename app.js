@@ -7,9 +7,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 var campgrounds = [
-    {name: "Salmon Creek", image: "https://www.flickr.com/photos/scpetrel/14301524356/"},
-    {name: "Granite Hill", image: "https://www.flickr.com/photos/scpetrel/14301524356/"},
-    {name: "Mountain Goat's Rest", image: "https://www.flickr.com/photos/scpetrel/14301524356/"}
+    {name: "Salmon Creek", image: "https://images.unsplash.com/photo-1542841366-c08a2567da87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"},
+    {name: "Granite Hill", image: "https://images.unsplash.com/photo-1542841366-c08a2567da87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"},
+    {name: "Mountain Goat's Rest", image: "https://images.unsplash.com/photo-1542841366-c08a2567da87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"}
 ];
 
 app.get("/", function(req, res) {
